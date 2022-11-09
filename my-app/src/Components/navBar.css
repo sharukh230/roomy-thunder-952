@@ -1,0 +1,9 @@
+.navBar{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+#Logo{
+    height: 80px;
+    
+}
