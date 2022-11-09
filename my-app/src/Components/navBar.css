@@ -2,8 +2,16 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 1rem;
 }
 #Logo{
     height: 80px;
     
+}
+.LogoContainer{
+
+}
+.mainNav{
+    display: flex;
+    justify-content: space-around;
 }
