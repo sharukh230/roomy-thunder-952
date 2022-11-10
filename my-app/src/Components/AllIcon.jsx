@@ -1,5 +1,5 @@
 // 1. Import
-import { Icon } from '@chakra-ui/react'
+import { Icon,Image } from '@chakra-ui/react'
 import { BsCart2 } from 'react-icons/bs'
 import { MdOutlineLocalOffer } from 'react-icons/md'
 import { AiOutlineMobile } from 'react-icons/ai'
@@ -19,4 +19,7 @@ function AppIcon(){
 function LoginIcon(){  
     return <Icon boxSize={"1.5em"} as={BsPerson}/>
 }
-export {CartIcon,OffersIcon,AppIcon,LoginIcon}
+function LogoIcon({pr}){
+    return <Image pr={pr} height="70px" src={require("./MediCLiQ.png")} alt="" />
+}
+export {CartIcon,OffersIcon,AppIcon,LoginIcon,LogoIcon}

@@ -1,9 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import "./navBar.css"
 import LoginDrawer from './LoginDrawer'
-import {CartIcon,OffersIcon,AppIcon} from './CartIcon'
-import { Box,Flex } from '@chakra-ui/react'
+import {CartIcon,OffersIcon,AppIcon,LogoIcon} from "./AllIcon"
+import { Box,Flex,Image } from '@chakra-ui/react'
 
 
 function Navbar() {
@@ -13,7 +12,7 @@ function Navbar() {
     display="flex" alignItems="center" justifyContent="space-around"
     boxShadow='md' p='0' rounded='md' bg='white'>
       <Box className='LogoContainer'>
-        <Link to="/"><img id='Logo' src={require("./MediCLiQ.png")} alt="" /> </Link>
+        <Link to="/"><LogoIcon  /> </Link>
 
       </Box>
       <Box display="flex" alignItems="center" justifyContent="space-between" gap="2.5rem">

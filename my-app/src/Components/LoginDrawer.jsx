@@ -8,7 +8,7 @@ import {
     DrawerContent,
     DrawerCloseButton,useDisclosure,Input,Button,Text
   } from '@chakra-ui/react'
-  import {LoginIcon} from "./CartIcon"
+  import {LoginIcon,LogoIcon} from "./AllIcon"
 
   function LoginDrawer(){
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -28,6 +28,7 @@ import {
         >
           <DrawerOverlay />
           <DrawerContent>
+            <LogoIcon pr="100px"/>
             <DrawerCloseButton />
             <DrawerHeader>Quick Login / Register</DrawerHeader>
   
