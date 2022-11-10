@@ -6,7 +6,7 @@ function Slider() {
     return (
 
         <div style={{ display: 'block', width: 700, padding: 60, margin:"auto" }}>
-            <h6>Home > HealthCare</h6>
+            <h6>Home HealthCare</h6>
             <Carousel>
                 <Carousel.Item interval={1500}>
                     <img
