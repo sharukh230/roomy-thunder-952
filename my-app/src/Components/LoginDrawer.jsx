@@ -6,8 +6,9 @@ import {
     DrawerHeader,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButton,useDisclosure,Input,Button
+    DrawerCloseButton,useDisclosure,Input,Button,Text
   } from '@chakra-ui/react'
+  import {LoginIcon,LogoIcon} from "./AllIcon"
 
   function LoginDrawer(){
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -16,9 +17,10 @@ import {
     return (
       <>
         <Button ref={btnRef} onClick={onOpen}>
+          <LoginIcon/>
           Hello, Login
         </Button>
-        <Drawer
+        <Drawer 
           isOpen={isOpen}
           placement='right'
           onClose={onClose}
@@ -26,19 +28,17 @@ import {
         >
           <DrawerOverlay />
           <DrawerContent>
+            <LogoIcon pr="100px"/>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader>Quick Login / Register</DrawerHeader>
   
             <DrawerBody>
-              <Input placeholder='Type here...' />
+              <Input placeholder='Enter your phone number' />
+              <h1>.</h1>
+              <Button pl="6.3rem" pr="6.3rem" backgroundColor='#10847E' color="white">Send OTP</Button>
+              <Text fontSize='xs'>By Clicking continue, you agree with our privacy policy</Text>
             </DrawerBody>
-  
-            <DrawerFooter>
-              <Button variant='outline' mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='blue'>Save</Button>
-            </DrawerFooter>
+
           </DrawerContent>
         </Drawer>
       </>

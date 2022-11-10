@@ -5,6 +5,7 @@ import AppDownload from "./AppDownload"
 import Login from "./Login"
 import Offers from "./Offers"
 import Cart from "./Cart"
+import HealthCare from './HealthCare'
 function AllRoutes() {
     return (
         <div>
@@ -14,6 +15,7 @@ function AllRoutes() {
                 {/* <Route path="/Login" element={<Login/>} /> */}
                 <Route path="/offers" element={<Offers/>} />
                 <Route path="/cart" element={<Cart/>} />
+                <Route path="/healthcare" element={<HealthCare/>} />
             </Routes>
         </div>
     )
