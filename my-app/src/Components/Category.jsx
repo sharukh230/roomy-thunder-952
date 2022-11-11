@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar } from './Avatar'
+import { Avatar, GridCategory } from './Avatar'
 import { Box } from "@chakra-ui/react"
 
 
@@ -65,13 +65,125 @@ function Category() {
         />    
     ))
     return (
-
         <Box pl="9rem" pr="9rem" display="flex" gap="30px">
             {diffCategory}
         </Box>
-
-
     )
 }
 
 export { Category }
+
+function HealthCareCategory(){
+    const healthcat=[
+        {
+            id:1,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:2,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:3,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:4,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:5,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:6,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:7,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:8,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:9,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:10,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:11,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:12,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:13,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:14,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:15,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+        {
+            id:16,
+            imageUrl: 'https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=720x0',
+            title: 'Medicine',
+            discount:"Upto 30% off",
+        },
+    ]
+    const healthCategory=healthcat.map((prop)=>(
+        <GridCategory
+        key={prop.id}
+        src={prop.imageUrl}
+        title={prop.title}
+        discount={prop.discount}
+        />
+    ))
+    return (
+        <Box display="grid" gridTemplateColumns="repeat(3,1fr)" width="60%" margin="auto" gap="20px" height="">
+            {healthCategory}
+        </Box>
+    )
+}
+export {HealthCareCategory}

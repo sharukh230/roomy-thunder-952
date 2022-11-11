@@ -6,6 +6,7 @@ import Login from "./Login"
 import Offers from "./Offers"
 import Cart from "./Cart"
 import HealthCare from './HealthCare'
+import HealthCareDevices from '../Components/HealthCareDevices'
 function AllRoutes() {
     return (
         <div>
@@ -16,6 +17,7 @@ function AllRoutes() {
                 <Route path="/offers" element={<Offers/>} />
                 <Route path="/cart" element={<Cart/>} />
                 <Route path="/healthcare" element={<HealthCare/>} />
+                <Route path="/healthcare/products" element={<HealthCareDevices/>} />
             </Routes>
         </div>
     )
