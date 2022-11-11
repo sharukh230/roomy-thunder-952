@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from "react-router-dom"
 import Home from "./Home"
 import AppDownload from "./AppDownload"
-import Login from "./Login"
+// import Login from "./Login"
 import Offers from "./Offers"
 import Cart from "./Cart"
 import HealthCare from './HealthCare'
