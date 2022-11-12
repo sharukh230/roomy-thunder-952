@@ -3,11 +3,18 @@ import React, {useState,useContext,useEffect} from 'react'
 import axios from "axios"
 import {CartContext} from '../Context/CartContextProvider';
 import {Box,Flex,Image,Text} from "@chakra-ui/react"
-import {addToCart} from "../Context/action"
+import {addToCart} from "../Context/CartContextProvider"
 
 const getData=()=>{
   return axios.get("http://localhost:8080/products")
 };
+
+const itemAlreadyExists=(id, cartItems)=>{
+  if(cartItems.find((item)=>item.id===id)){
+    return true;
+  }
+  return false;
+}
 
 function HealthCareDevices() {
  
@@ -15,7 +22,7 @@ function HealthCareDevices() {
   const [data,setData] =useState([]);
   const [error, setError] =useState(false);
 
-  // const {state, dispatch} = useContext(CartContext);
+  const {state, dispatch} = useContext(CartContext);
 
   useEffect(()=>{
     setLoading(true);
@@ -104,10 +111,10 @@ function HealthCareDevices() {
                     <Button
                     colourScheme="gray"
                     varient="outline"
-                    // onClick={()=>dispatch(addToCart(product))}
+                    disabled={itemAlreadyExists(product.id, state)}
+                    onClick={()=>dispatch(addToCart(product))}
                     >
                       Add To Cart
-
                     </Button>
                   </Flex>
                 </GridItem>

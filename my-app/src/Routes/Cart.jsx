@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { CartContext } from "../Context/CartContextProvider";
-import { checkout, removeFromCart } from "../Context/action"
+import { checkout, removeFromCart } from "../Context/CartContextProvider"
 import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Button, Center, Table, TableCaption, TableContainer, Tbody, Thead, useDisclosure } from '@chakra-ui/react';
 import {Box, Th,Tr,Td,Tfoot} from "@chakra-ui/react"
 
