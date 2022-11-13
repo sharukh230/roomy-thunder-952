@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { CartContext } from "../Context/CartContextProvider";
 import { checkout, removeFromCart } from "../Context/CartContextProvider"
 import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Button, Center, Table, TableCaption, TableContainer, Tbody, Thead, useDisclosure } from '@chakra-ui/react';
-import {Box, Th,Tr,Td,Tfoot} from "@chakra-ui/react"
+import {Box, Th,Tr,Td,Tfoot,Image} from "@chakra-ui/react"
+import Footer from "../Components/Footer"
 
 function Cart() {
   const { state, dispatch } = useContext(CartContext);
@@ -24,7 +25,8 @@ function Cart() {
           </TableCaption>
           <Thead>
             <Tr>
-              <Th fontSize={{ base: "xs", md: "md" }}>Product</Th>
+              <Th fontSize={{ base: "xs", md: "md" }}>Image</Th>
+              <Th fontSize={{ base: "xs", md: "md" }}>Title</Th>
               <Th fontSize={{ base: "xs", md: "md" }}>Price(INR)</Th>
               <Th fontSize={{ base: "xs", md: "md" }}>Remove From Cart</Th>
             </Tr>
@@ -32,6 +34,7 @@ function Cart() {
           <Tbody>
             {state.map((cartItem) => (
               <Tr key={cartItem.id}>
+                <Td fontSize={{ base: "xs", md: "md" }}>{<Image width="70px" src={cartItem.imageSrc}/>}</Td>
                 <Td fontSize={{ base: "xs", md: "md" }}>{cartItem.title}</Td>
                 <Td fontSize={{ base: "xs", md: "md" }}>{cartItem.price}</Td>
                 <Td fontSize={{ base: "xs", md: "md" }}>
@@ -44,10 +47,11 @@ function Cart() {
           </Tbody>
           <Tfoot>
             <Tr>
+              <Th fontSize={{ base: "xs", md: "md" }}></Th>
               <Th fontSize={{ base: "xs", md: "md" }}>Final Price</Th>
               <Th fontSize={{ base: "xs", md: "md" }}>
 
-                {Math.round(state.reduce((a,c)=>a+c.price,0))}
+                {state.reduce((a,c)=>a + Number(c.price),0)}
               </Th>
             </Tr>
           </Tfoot>
@@ -82,7 +86,9 @@ function Cart() {
           </AlertDialogOverlay>
         </AlertDialog>
       </Center>
+      <Footer/>
     </Box>
+
   )
 }
 

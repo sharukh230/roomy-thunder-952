@@ -21,7 +21,13 @@ function AllRoutes() {
                    <CartContextProvider><Cart/></CartContextProvider> 
                 } />
                 <Route path="/healthcare" element={<HealthCare/>} />
-                <Route path="/healthcare/products" element={<HealthCareDevices/>} />
+                <Route path="/healthcare/products" element={
+                <CartContextProvider>
+                    
+                    <HealthCareDevices/>
+                </CartContextProvider>
+                
+                } />
             </Routes>
         </div>
     )
