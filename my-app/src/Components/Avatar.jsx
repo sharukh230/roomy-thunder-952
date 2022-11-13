@@ -1,6 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react"
 
-export function Avatar({ key, src, alt, title }) {
+export function Avatar({  src, alt, title }) {
     return (
         <Box>
             <Image src={src} alt={alt} />
@@ -10,7 +10,7 @@ export function Avatar({ key, src, alt, title }) {
     )
 }
 
-export function GridCategory({ key, src, title, discount }) {
+export function GridCategory({  src, title, discount }) {
     return (
         <Box display="flex" border="1px solid gray" pl="1rem" pb="0.5rem">
             <Box>
